@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Tela ERP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta Tela ERP</h1>
+
+        <!-- Caixa de upload do arquivo -->
+        <div class="upload-container">
+            <label for="fileInput" class="upload-label">Carregar Planilha:</label>
+            <input type="file" id="fileInput" accept=".xlsx, .xls" />
+        </div>
+
+        <!-- Caixa de pesquisa -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Digite o número ou descrição da tela ERP" onkeyup="searchTable()" />
+        </div>
+
+        <!-- Tabela de dados -->
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Tela</th>
+                    <th>Descrição da Tela</th>
+                    <th>Time Responsável</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados carregados via JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Mensagem de tela não encontrada -->
+        <p id="message" style="display: none;">Tela não identificada</p>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Natanael com HTML, CSS e JavaScript</p>
+    </footer>
+
+    <!-- Bibliotecas externas e script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
